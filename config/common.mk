@@ -60,7 +60,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
-# Lineage-specific broadcast actions whitelist
+
+# ROM-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/euclid/config/permissions/euclid-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/euclid-sysconfig.xml
 
