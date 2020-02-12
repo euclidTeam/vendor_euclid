@@ -308,6 +308,9 @@ ifeq ($(SystemUI_Clocks),true)
 $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 endif
 
+# Audio
+include vendor/euclid/config/audio.mk
+
 # Fonts
 $(call inherit-product, vendor/euclid/config/fonts.mk)
 
