@@ -451,8 +451,25 @@ function makerecipe() {
     '
 }
 
+
+function __detect_shell() {
+    case `ps -o command -p $$` in
+        *bash*)
+            echo bash
+            ;;
+        *zsh*)
+            echo zsh
+            ;;
+        *)
+            echo unknown
+            return 1
+            ;;
+    esac
+    return
+}
+
 function euclidgerrit() {
-    if [ "$(basename $SHELL)" = "zsh" ]; then
+    if [ "$(__detect_shell)" = "zsh" ]; then
         # zsh does not define FUNCNAME, derive from funcstack
         local FUNCNAME=$funcstack[1]
     fi
