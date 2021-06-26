@@ -17,7 +17,8 @@
 # Themes
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay \
-    RoundQSOverlay
+    RoundQSOverlay \
+    NavigationBarNoHintOverlay
 
 # System Icon Packs
 PRODUCT_PACKAGES += \
