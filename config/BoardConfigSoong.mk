@@ -31,6 +31,8 @@ SOONG_CONFIG_euclidGlobalVars += \
     aapt_version_code \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
+    camera_needs_client_info_lib \
+    camera_needs_client_info_lib_oplus \
     camera_override_format_from_reserved \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
@@ -89,6 +91,8 @@ SOONG_CONFIG_euclidGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_euclidGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_euclidGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_euclidGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
+SOONG_CONFIG_euclidGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_euclidGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
