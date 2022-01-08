@@ -207,4 +207,4 @@ include vendor/euclid/config/version.mk
 include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
 #include vendor/euclid/config/fonts.mk
-#include vendor/euclid/config/themes.mk
+include vendor/euclid/config/themes.mk
