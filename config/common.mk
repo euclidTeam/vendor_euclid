@@ -302,6 +302,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RepainterServicePriv
 
+# TouchGestures
+TARGET_SUPPORTS_TOUCHGESTURES ?= false
+ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
+PRODUCT_PACKAGES += \
+    TouchGestures \
+    TouchGesturesSettingsOverlay
+endif
+
 # Inherit SystemUI Clocks if they exist
 ifeq ($(SystemUI_Clocks),true)
 $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
