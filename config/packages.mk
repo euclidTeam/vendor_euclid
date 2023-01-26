@@ -12,3 +12,11 @@ PRODUCT_PACKAGES += \
     nano \
     setcap \
     vim
+
+# TouchGestures
+TARGET_SUPPORTS_TOUCHGESTURES ?= false
+ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
+PRODUCT_PACKAGES += \
+    TouchGestures \
+    TouchGesturesSettingsOverlay
+endif
