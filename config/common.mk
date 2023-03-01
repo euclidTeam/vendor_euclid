@@ -67,7 +67,10 @@ PRODUCT_COPY_FILES += \
 
 # Lineage-specific init rc file
 PRODUCT_COPY_FILES += \
-    vendor/euclid/prebuilt/common/etc/init/init.euclid-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-system_ext.rc
+    vendor/euclid/prebuilt/common/etc/init/init.euclid-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-system_ext.rc \
+    vendor/euclid/config/permissions/org.lineageos.health.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.health.xml \
+    vendor/euclid/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.livedisplay.xml
+
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
