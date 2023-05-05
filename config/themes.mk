@@ -18,3 +18,10 @@
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay \
     RoundQSOverlay
+
+# Icon shapes
+PRODUCT_PACKAGES += \
+    IconShapeIosOverlay \
+    IconShapeLeafyOverlay \
+    IconShapeRohieMeowOverlay \
+    IconShapeScrollOverlay
