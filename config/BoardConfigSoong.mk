@@ -51,7 +51,8 @@ SOONG_CONFIG_euclidGlobalVars += \
     target_trust_usb_control_disable \
     uses_egl_display_array \
     uses_oplus_camera \
-    uses_nothing_camera
+    uses_nothing_camera \
+    include_miui_camera
 
 SOONG_CONFIG_NAMESPACES += euclidNvidiaVars
 SOONG_CONFIG_euclidNvidiaVars += \
@@ -83,6 +84,7 @@ SOONG_CONFIG_euclidQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PR
 SOONG_CONFIG_euclidGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 SOONG_CONFIG_euclidGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_euclidGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
+SOONG_CONFIG_euclidGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
