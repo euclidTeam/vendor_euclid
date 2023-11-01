@@ -197,6 +197,9 @@ PRODUCT_PACKAGES += \
 #BCR
 $(call inherit-product, vendor/bcr/bcr.mk)
 
+# Inherit SystemUI Clocks if they exist
+$(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
+
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
