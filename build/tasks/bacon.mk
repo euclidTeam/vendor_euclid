@@ -24,7 +24,7 @@ endif
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: euclid
-euclid: $(INTERNAL_OTA_PACKAGE_TARGET)
+euclid: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
         $(hide) ./vendor/euclid/build/tasks/ascii_output.sh
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(EUCLID_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(EUCLID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(EUCLID_TARGET_PACKAGE).sha256sum
