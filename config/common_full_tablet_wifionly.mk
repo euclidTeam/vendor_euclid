@@ -14,3 +14,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Include euclid LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/euclid/overlay/dictionaries
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/euclid/overlay/dictionaries
+
+$(call inherit-product, vendor/euclid/config/wifionly.mk)
