@@ -199,6 +199,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     euclidOSWallpaperStub \
     ParallelSpace \
+    LatinIME \
 
 # Repainter integration
 PRODUCT_PACKAGES += \
