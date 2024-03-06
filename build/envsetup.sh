@@ -69,7 +69,7 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    source ${ANDROID_BUILD_TOP}/vendor/euclid/vars/aosp_target_release
+    local aosp_target_release=$(cat ${ANDROID_BUILD_TOP}/vendor/euclid/vars/aosp_target_release 2>/dev/null)
 
     if [ $# -eq 0 ]; then
         # No arguments, so let's have the full menu
