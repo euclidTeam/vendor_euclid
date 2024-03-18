@@ -951,7 +951,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/euclid/build/tools/repopick.py $@
+    python3 $T/vendor/euclid/build/tools/repopick.py $@
 }
 
 function sort-blobs-list() {
