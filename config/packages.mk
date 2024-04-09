@@ -1,6 +1,7 @@
 # euclidOS packages
 PRODUCT_PACKAGES += \
-    OmniJaws
+    OmniJaws \
+    ParallelSpace
 
 # Extra tools in euclid
 PRODUCT_PACKAGES += \
