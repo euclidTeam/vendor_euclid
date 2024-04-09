@@ -191,6 +191,7 @@ PRODUCT_PACKAGES += \
     Recorder \
     ExactCalculator \
     euclidOSWallpaperStub \
+    ParallelSpace \
 
 # Repainter integration
 PRODUCT_PACKAGES += \

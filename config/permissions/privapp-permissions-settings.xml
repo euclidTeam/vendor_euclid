@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
+    <privapp-permissions package="com.android.systemui">
+        <permission name="com.android.permission.MANAGE_PARALLEL_SPACES"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.android.settings">
         <permission name="android.permission.MANAGE_APP_LOCK" />
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.launcher3">
+        <permission name="com.android.permission.MANAGE_PARALLEL_SPACES"/>
     </privapp-permissions>
 </permissions>
