@@ -51,7 +51,8 @@ SOONG_CONFIG_euclidGlobalVars += \
     target_trust_usb_control_disable \
     uses_egl_display_array\
     needs_camera_boottime \
-    target_camera_package_name
+    target_camera_package_name \
+    camera_needs_client_info
 
 SOONG_CONFIG_NAMESPACES += euclidNvidiaVars
 SOONG_CONFIG_euclidNvidiaVars += \
@@ -83,6 +84,7 @@ SOONG_CONFIG_euclidQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE
 SOONG_CONFIG_euclidQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_euclidGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_euclidGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
+SOONG_CONFIG_euclidGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
