@@ -85,6 +85,7 @@ SOONG_CONFIG_euclidQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PR
 SOONG_CONFIG_euclidGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_euclidGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
 SOONG_CONFIG_euclidGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_euclidGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
