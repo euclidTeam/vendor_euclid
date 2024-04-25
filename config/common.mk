@@ -284,13 +284,6 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub
 
-# Updater
-PRODUCT_PACKAGES += \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/euclid/prebuilt/common/etc/init/init.euclid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-updater.rc
-
 # Apps
 PRODUCT_PACKAGES += \
     Aperture \
@@ -318,6 +311,8 @@ endif
 # Fonts
 $(call inherit-product, vendor/euclid/config/fonts.mk)
 
+
+include vendor/euclid/config/ota.mk
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
