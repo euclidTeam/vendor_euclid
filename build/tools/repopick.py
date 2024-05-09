@@ -370,7 +370,7 @@ def main():
             if not args.quiet:
                 print("")
 
-    # Get the main manifest from repo
+    # Get the master manifest from repo
     #   - convert project name and revision to a path
     project_name_to_data = {}
     manifest = subprocess.check_output(["repo", "manifest"], text=True)

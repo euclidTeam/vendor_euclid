@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common euclid stuff
+$(call inherit-product, vendor/euclid/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
@@ -12,8 +12,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     Etar \
     Profiles \
-    Recorder \
-    Seedvault
+    Recorder
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
