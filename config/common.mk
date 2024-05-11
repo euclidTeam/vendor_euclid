@@ -229,8 +229,10 @@ $(call inherit-product, vendor/bcr/bcr.mk)
 # Inherit SystemUI Clocks if they exist
 $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 
+# Fonts
+$(call inherit-product, vendor/euclid/config/fonts.mk)
+
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
-#include vendor/euclid/config/fonts.mk
 include vendor/euclid/config/themes.mk

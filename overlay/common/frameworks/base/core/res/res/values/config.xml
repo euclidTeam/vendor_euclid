@@ -190,7 +190,16 @@
          should also be non-empty.-->
     <string name="config_rawContactsLocalAccountType" translatable="false">com.android.contacts</string>
 
+    <!-- Name of a font family to use for body text. -->
+    <string name="config_bodyFontFamily">general-sans-text</string>
+    <string name="config_bodyFontFamilyMedium">general-sans-text-medium</string>
+
+    <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
+    <string name="config_headlineFontFamily">general-sans</string>
+    <string name="config_headlineFontFamilyMedium">general-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
-    <string name="config_clockFontFamily" translatable="false" />
+    <string name="config_clockFontFamily">general-sans-clock</string>
+
 </resources>
