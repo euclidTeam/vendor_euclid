@@ -235,6 +235,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BtHelper
 
+# Flags
+PRODUCT_PACKAGES += \
+    SystemUIFlagFlipper
+
 # Storage manager
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.storage_manager.enabled=true
