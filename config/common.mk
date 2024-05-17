@@ -60,6 +60,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
 
 # ROM-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
