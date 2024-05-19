@@ -445,5 +445,337 @@
     </font>
     </family>
     <alias name="manrope-medium" to="manrope" weight="600" />
+    
+    <family customizationType="new-named-family" name="Author">
+      <font weight="400" style="normal">Author-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">Author-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">Author-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">Author-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">Author-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">Author-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">Author-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">Author-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Cabinet-Grotesk">
+      <font weight="400" style="normal">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">CabinetGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Fixel">
+      <font weight="400" style="normal">FixelVariable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">FixelVariable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">FixelVariable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">FixelVariable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">FixelVariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">FixelVariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">FixelVariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">FixelVariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Satoshi">
+      <font weight="400" style="normal">Satoshi-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">Satoshi-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">Satoshi-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">Satoshi-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">Satoshi-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">Satoshi-VariableItalic.ttf
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">Satoshi-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">Satoshi-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Space-Grotesk">
+      <font weight="400" style="normal">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">SpaceGrotesk-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Switzer">
+      <font weight="400" style="normal">Switzer-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">Switzer-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">Switzer-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">Switzer-Variable.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">Switzer-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">Switzer-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">Switzer-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">Switzer-VariableItalic.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Uncut-Sans">
+      <font weight="400" style="normal">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="normal">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="normal">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="normal">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+      <font weight="400" style="italic">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="400"/>
+      </font>
+      <font weight="500" style="italic">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="500"/>
+      </font>
+      <font weight="600" style="italic">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="600"/>
+      </font>
+      <font weight="700" style="italic">Uncut-Sans-VF.ttf
+        <axis tag="ital" stylevalue="0" />
+        <axis tag="wdth" stylevalue="17.0"/>
+        <axis tag="wght" stylevalue="700"/>
+      </font>
+    </family>
+    
+    <family customizationType="new-named-family" name="Eudoxus-Sans">
+    <font weight="500" style="normal">EudoxusSansGX.ttf
+        <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="600" style="normal">EudoxusSansGX.ttf
+        <axis tag="wght" stylevalue="600"/>
+    </font>
+    <font weight="700" style="normal">EudoxusSansGX.ttf
+        <axis tag="wght" stylevalue="700"/>
+    </font>
+    <font weight="800" style="normal">EudoxusSansGX.ttf
+        <axis tag="wght" stylevalue="800"/>
+    </font>
+    </family>
+    <alias name="Eudoxus-Sans-medium" to="Eudoxus-Sans" weight="600" />
+    
+    <family customizationType="new-named-family" name="DM-Sans">
+    <font weight="400" style="normal">dm-sans-latin-400-normal.ttf
+        <axis tag="wght" stylevalue="400"/>
+    </font>
+    <font weight="500" style="normal">dm-sans-latin-500-normal.ttf
+        <axis tag="wght" stylevalue="500"/>
+    </font>
+    <font weight="600" style="normal">dm-sans-latin-600-normal.ttf
+        <axis tag="wght" stylevalue="600"/>
+    </font>
+    <font weight="700" style="normal">dm-sans-latin-700-normal.ttf
+        <axis tag="wght" stylevalue="700"/>
+    </font>
+    </family>
+    <alias name="DM-Sans-medium" to="DM-Sans" weight="600" />
 
 </fonts-modification>
