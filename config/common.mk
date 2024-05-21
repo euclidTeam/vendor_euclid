@@ -231,6 +231,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     rsync
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Storage manager
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.storage_manager.enabled=true
