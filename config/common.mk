@@ -129,15 +129,7 @@ PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
     SimpleSettingsConfig
 
-# Extra tools in euclid
-PRODUCT_PACKAGES += \
-    bash \
-    curl \
-    getcap \
-    htop \
-    nano \
-    setcap \
-    vim
+
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
@@ -209,3 +201,4 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/euclid/build/target/product/security/euclid
 
 include vendor/euclid/config/version.mk
+include vendor/euclid/config/packages.mk
