@@ -11,7 +11,9 @@ EUCLID_ZIP_TYPE := Vanilla
 ifeq ($(EUCLID_GAPPS), true)
     $(call inherit-product, vendor/gms/common/common-vendor.mk)
     EUCLID_ZIP_TYPE := Gapps
+    PRODUCT_PACKAGES += OTAGapps
 else
+PRODUCT_PACKAGES += OTAVanilla
 PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.theme=glif_v4 \
     ro.config.notification_sound=Argon.ogg \
