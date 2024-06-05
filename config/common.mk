@@ -12,20 +12,40 @@ ifeq ($(EUCLID_GAPPS), true)
     $(call inherit-product, vendor/gms/common/common-vendor.mk)
     EUCLID_ZIP_TYPE := Gapps
     SystemUI_Clocks := false
-    PRODUCT_PACKAGES += OTAGapps
+    PRODUCT_PACKAGES += \
+	OTAGapps
 
     # Remove vendor/SystemUIClocks if it exists
     ifeq ($(wildcard vendor/SystemUIClocks), vendor/SystemUIClocks)
         $(shell rm -rf vendor/SystemUIClocks)
     endif
 else
-    PRODUCT_PACKAGES += OTAVanilla
+    PRODUCT_PACKAGES += \
+	OTAVanilla
+
     SystemUI_Clocks := true
     PRODUCT_PRODUCT_PROPERTIES += \
         setupwizard.theme=glif_v4 \
 
     $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 
+endif
+
+# Google wallpaper Config
+TARGET_INCLUDE_PIXEL_LAUNCHER ?= false
+ifeq ($(TARGET_INCLUDE_PIXEL_LAUNCHER),true)
+PRODUCT_PACKAGES += \
+    GappsFrameworks \
+    GappsLauncherOverlay \
+    GappsSettings \
+    GappsSystemUI
+
+else
+   PRODUCT_PACKAGES += \
+      AOSPFrameworks \
+      AOSPLauncherOverlay \
+      AOSPSettings \
+      AOSPSystemUI
 endif
 
 
