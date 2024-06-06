@@ -360,6 +360,9 @@ PRODUCT_PACKAGES += \
     ParallelSpace \
     LatinIME \
 
+PRODUCT_COPY_FILES += \
+    vendor/euclid/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+
 # Repainter integration
 PRODUCT_PACKAGES += \
     RepainterServicePriv
