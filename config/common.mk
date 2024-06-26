@@ -8,10 +8,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 EUCLID_ZIP_TYPE := Vanilla
 
 # Gapps
-ifeq ($(EUCLID_GAPPS), true)
-    $(call inherit-product, vendor/gms/common/common-vendor.mk)
-    EUCLID_ZIP_TYPE := Gapps
-endif
+#ifeq ($(EUCLID_GAPPS), true)
+#    $(call inherit-product, vendor/gms/common/common-vendor.mk)
+#    EUCLID_ZIP_TYPE := Gapps
+#endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
