@@ -21,6 +21,8 @@ else
 EUCLID_TARGET_PACKAGE := $(PRODUCT_OUT)/euclidOS-$(EUCLID_VERSION)-Vanilla.zip
 endif
 
+EUCLID_OTA_PACKAGE := euclidOS-$(EUCLID_VERSION)-$(EUCLID_ZIP_TYPE).zip
+
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: euclid
@@ -28,6 +30,7 @@ euclid: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
         $(hide) ./vendor/euclid/build/tasks/ascii_output.sh
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(EUCLID_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(EUCLID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(EUCLID_TARGET_PACKAGE).sha256sum
+	$(hide) ./vendor/euclid/build/tools/generate_json_build_info.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(EUCLID_OTA_PACKAGE)
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(EUCLID_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(EUCLID_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
