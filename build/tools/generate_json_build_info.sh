@@ -1,44 +1,109 @@
 #!/bin/bash
-CL_RED="\033[31m"
-CL_CYN="\033[1;36m"
-CL_PRP="\033[35m"
-CL_NC="\033[0m"
-if [ "$1" ]; then
-    echo "Generating .json"
-    file_path=$1
-    file_name=$(basename "$file_path")
-    DEVICE=$(echo $TARGET_PRODUCT | sed 's/euclid_//g')
-    if [ -f $file_path ]; then
-        # only generate for official builds. unless forced with 'export FORCE_JSON=1'
-        if [[ $file_name == *"official"* ]] || [[ $FORCE_JSON == 1 ]]; then
-            if [[ $FORCE_JSON == 1 ]]; then
-                echo -e "${CL_CYN}Forced generation of json${CL_NC}"
-            fi
-            file_size=$(stat -c%s $file_path)
-            md5=$(md5sum $file_path | awk '{ print $1 }');
-            timestamp=$(grep ro\.build\.date\.utc ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            id=$(cat "$file_path.sha256sum" | cut -d' ' -f1);
-            build_type=$(grep ro\.euclid\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            base_version=$(grep ro\.euclid\.base\.version ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            link="https://sourceforge.net/projects/euclidOS/files/${DEVICE}/${file_name}/download"
-            echo "{" > $file_path.json
-            echo "  \"response\": [" >> $file_path.json
-            echo "    {" >> $file_path.json
-            echo "      \"timestamp\": ${timestamp}," >> $file_path.json
-            echo "      \"size\": ${file_size}," >> $file_path.json
-            echo "      \"filehash\": \"${md5}\"," >> $file_path.json
-            echo "      \"filename\": \"${file_name}\"," >> $file_path.json
-            echo "      \"id\": \"${id}\"," >> $file_path.json
-            echo "      \"romtype\": \"${build_type}\"," >> $file_path.json
-            echo "      \"version\": \"${base_version}\"," >> $file_path.json
-            echo "      \"url\": \"${link}\"" >> $file_path.json
-            echo "    }" >> $file_path.json
-            echo "  ]" >> $file_path.json
-            echo "}" >> $file_path.json
-            mv "${file_path}.json" "./${DEVICE}.json"
-            echo -e "${CL_CYN}Done generating ${CL_PRP}${DEVICE}.json${CL_NC}"
-        else
-            echo -e "${CL_RED}Skipped generating json for a non-official build${CL_NC}"
-        fi
-    fi
+#
+# Copyright (C) 2019-2023 crDroid Android Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# $1=TARGET_DEVICE, $2=PRODUCT_OUT, $3=FILE_NAME
+existingOTAjson=./vendor/euclidOTA/builds/*/$1.json
+output=$2/$1.json
+version=./vendor/euclid/config/version.mk
+
+# cleanup old file
+if [ -f $output ]; then
+        rm $output
 fi
+
+echo "Generating JSON file data for OTA support..."
+
+if [ -f $existingOTAjson ]; then
+        # get data from already existing device json
+        maintainer=`grep -n "\"maintainer\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+        oem=`grep -n "\"oem\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+        device=`grep -n "\"device\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+        filename=$3
+        v_euclid=`grep 'EUCLIDVERSION =' $version | tr -d ' ' | cut -d '=' -f 2`
+        version=`echo $v_euclid`
+        buildprop=$2/system/build.prop
+        linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
+        timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
+        md5=`md5sum "$2/$3" | cut -d' ' -f1`
+        sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
+        size=`stat -c "%s" "$2/$3"`
+        buildtype=`grep -n "\"buildtype\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+        forum=`grep -n "\"forum\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
+        if [ ! -z "$forum" ]; then
+                forum="https:"$forum
+        fi
+        telegram=`grep -n "\"telegram\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
+        if [ ! -z "$telegram" ]; then
+                telegram="https:"$telegram
+        fi
+
+
+        echo '{
+        "response": [
+                {
+                        "maintainer": "'$maintainer'",
+                        "oem": "'$oem'",
+                        "device": "'$device'",
+                        "version": "'$version'",
+                        "filename": "'$filename'",
+                        "download": "https://sourceforge.net/projects/euclidOS/files/'$1'/'$3'/download",
+                        "timestamp": '$timestamp',
+                        "md5": "'$md5'",
+                        "sha256": "'$sha256'",
+                        "size": '$size',
+                        "buildtype": "'$buildtype'",
+                        "forum": "'$forum'",
+                        "telegram": "'$telegram'"
+                }
+        ]
+}' >> $output
+else
+        filename=$3
+        v_euclid=`grep 'EUCLIDVERSION =' $version | tr -d ' ' | cut -d '=' -f 2`
+        version=`echo $v_euclid`
+        buildprop=$2/system/build.prop
+        linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
+        timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
+        md5=`md5sum "$2/$3" | cut -d' ' -f1`
+        sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
+        size=`stat -c "%s" "$2/$3"`
+
+        echo '{
+        "response": [
+                {
+                        "maintainer": "''",
+                        "oem": "''",
+                        "device": "''",
+                        "version": "'$version'",
+                        "filename": "'$filename'",
+                        "download": "https://sourceforge.net/projects/euclidOS/files/'$1'/'$3'/download",
+                        "timestamp": '$timestamp',
+                        "md5": "'$md5'",
+                        "sha256": "'$sha256'",
+                        "size": '$size',
+                        "buildtype": "''",
+                        "forum": "''",
+                        "telegram": "''"
+                }
+        ]
+}' >> $output
+
+        echo 'There is no official support for this device yet'
+        echo 'Contact our team on telegram fot it'
+fi
+
+echo ""

@@ -17,6 +17,7 @@
 # euclidOS OTA update package
 
 EUCLID_TARGET_PACKAGE := $(PRODUCT_OUT)/euclidOS-$(EUCLID_VERSION).zip
+EUCLID_OTA_PACKAGE := euclidOS-$(EUCLID_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
@@ -25,7 +26,7 @@ euclid: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ./vendor/euclid/build/tasks/ascii_output.sh
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(EUCLID_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(EUCLID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(EUCLID_TARGET_PACKAGE).sha256sum
-	$(hide) ./vendor/euclid/build/tools/generate_json_build_info.sh $(EUCLID_TARGET_PACKAGE)
+	$(hide) ./vendor/euclid/build/tools/generate_json_build_info.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(EUCLID_OTA_PACKAGE)
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
 	echo -e ${CL_BLD}${CL_CYN}"Timestamp:"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(EUCLID_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
