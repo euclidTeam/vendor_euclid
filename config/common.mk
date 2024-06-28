@@ -186,6 +186,12 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
+PRODUCT_COPY_FILES += \
+    vendor/euclid/prebuilt/common/etc/init/init.euclid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-updater.rc
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
