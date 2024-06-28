@@ -236,6 +236,13 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ThemesStub
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
+PRODUCT_COPY_FILES += \
+    vendor/euclid/prebuilt/common/etc/init/init.euclid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-updater.rc
+
 # Apps
 PRODUCT_PACKAGES += \
     Aperture \
