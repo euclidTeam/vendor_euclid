@@ -8,10 +8,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 EUCLID_ZIP_TYPE := Vanilla
 
 # Gapps
-#ifeq ($(EUCLID_GAPPS), true)
-#    $(call inherit-product, vendor/gms/common/common-vendor.mk)
-#    EUCLID_ZIP_TYPE := Gapps
-#endif
+ifeq ($(EUCLID_GAPPS), true)
+    $(call inherit-product, vendor/gms/common/common-vendor.mk)
+    EUCLID_ZIP_TYPE := Gapps
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.theme=glif_v4 \
+    ro.config.notification_sound=Argon.ogg \
+    ro.config.alarm_alert=Hassium.ogg \
+    ro.config.ringtone=Ring_Classic_02.ogg
+endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -216,8 +222,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # SetupWizard
 PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.theme=glif_v4 \
-    setupwizard.feature.day_night_mode_enabled=true
+    setupwizard.feature.day_night_mode_enabled=true \
 
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/euclid/overlay/common
