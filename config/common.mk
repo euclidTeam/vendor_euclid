@@ -9,7 +9,7 @@ EUCLID_ZIP_TYPE := Vanilla
 
 # Gapps
 ifeq ($(EUCLID_GAPPS), true)
-    $(call inherit-product, vendor/gms/common/common-vendor.mk)
+#    $(call inherit-product, vendor/gms/common/common-vendor.mk)
     EUCLID_ZIP_TYPE := Gapps
     SystemUI_Clocks := false
     PRODUCT_PACKAGES += OTAGapps
