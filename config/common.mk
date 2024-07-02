@@ -30,7 +30,7 @@ else
 
     # Clone the repository if vendor/SystemUIClocks does not exist
     ifneq ($(wildcard vendor/SystemUIClocks), vendor/SystemUIClocks)
-        $(shell git clone https://gitlab.com/euclidos/vendor_SystemUIClocks.git -b qpr3 vendor/SystemUIClocks)
+        $(shell git clone "https://gitlab.com/euclidos/vendor_SystemUIClocks.git" -b qpr3 vendor/SystemUIClocks)
     endif
 endif
 

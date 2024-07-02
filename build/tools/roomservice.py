@@ -36,8 +36,8 @@ product = sys.argv[1]
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/euclid.xml"
-custom_default_revision = "14"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', '14')
+custom_default_revision = "qpr3"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'qpr3')
 custom_dependencies = "euclid.dependencies"
 org_manifest = "euclid-devices"  # leave empty if org is provided in manifest
 org_display = "euclid-Devices"  # needed for displaying
