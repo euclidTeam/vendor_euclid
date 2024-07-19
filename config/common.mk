@@ -18,7 +18,6 @@ ifeq ($(EUCLID_GAPPS), true)
     ifeq ($(wildcard vendor/SystemUIClocks), vendor/SystemUIClocks)
         $(shell rm -rf vendor/SystemUIClocks)
     endif
-
 else
     PRODUCT_PACKAGES += OTAVanilla
     SystemUI_Clocks := true
@@ -28,10 +27,8 @@ else
         ro.config.alarm_alert=Hassium.ogg \
         ro.config.ringtone=Ring_Classic_02.ogg
 
-    # Clone the repository if vendor/SystemUIClocks does not exist
-    ifneq ($(wildcard vendor/SystemUIClocks), vendor/SystemUIClocks)
-        $(shell git clone "https://gitlab.com/euclidos/vendor_SystemUIClocks.git" -b qpr3 vendor/SystemUIClocks)
-    endif
+    $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
+
 endif
 
 
@@ -52,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
-    
+
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
