@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
     vendor/euclid/audio/alarms/Spokes.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Spokes.ogg \
     vendor/euclid/audio/alarms/Sunshower.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Sunshower.ogg \
     vendor/euclid/audio/notifications/Beginning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Beginning.ogg \
+    vendor/euclid/audio/notifications/Blink.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Blink.ogg \
     vendor/euclid/audio/notifications/Coconuts.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Coconuts.ogg \
     vendor/euclid/audio/notifications/Duet.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Duet.ogg \
     vendor/euclid/audio/notifications/End_note.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/End_note.ogg \
@@ -28,6 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/euclid/audio/notifications/Tuneup.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Tuneup.ogg \
     vendor/euclid/audio/notifications/Tweeter.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Tweeter.ogg \
     vendor/euclid/audio/notifications/Twinkle.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Twinkle.ogg \
+    vendor/euclid/audio/ringtones/Amenity.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Amenity.ogg \
     vendor/euclid/audio/ringtones/Copycat.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Copycat.ogg \
     vendor/euclid/audio/ringtones/Crackle.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Crackle.ogg \
     vendor/euclid/audio/ringtones/Flutterby.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Flutterby.ogg \
@@ -73,6 +75,6 @@ PRODUCT_COPY_FILES += \
 
 # Change default sounds
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.ringtone=Amenity.ogg \
+    ro.config.notification_sound=Blink.ogg \
     ro.config.alarm_alert=Bright_morning.ogg
