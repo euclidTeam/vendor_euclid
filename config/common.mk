@@ -305,9 +305,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RepainterServicePriv
 
-#BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
-
 # Inherit SystemUI Clocks if they exist
 ifeq ($(SystemUI_Clocks),true)
 $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
@@ -326,3 +323,4 @@ include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
 include vendor/euclid/config/themes.mk
 -include vendor/euclid-priv/keys/keys.mk
+include vendor/prebuilds/prebuilds.mk
