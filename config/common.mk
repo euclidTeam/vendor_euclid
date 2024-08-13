@@ -23,9 +23,6 @@ else
     SystemUI_Clocks := true
     PRODUCT_PRODUCT_PROPERTIES += \
         setupwizard.theme=glif_v4 \
-        ro.config.notification_sound=Argon.ogg \
-        ro.config.alarm_alert=Hassium.ogg \
-        ro.config.ringtone=Ring_Classic_02.ogg
 
     $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 
