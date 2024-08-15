@@ -318,9 +318,6 @@ endif
 # Audio
 include vendor/euclid/config/audio.mk
 
-# Fonts
-$(call inherit-product, vendor/euclid/config/fonts.mk)
-
 
 include vendor/euclid/config/ota.mk
 include vendor/euclid/config/version.mk
