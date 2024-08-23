@@ -331,6 +331,7 @@ include vendor/euclid/config/audio.mk
 
 
 include vendor/euclid/config/ota.mk
+include vendor/euclid/config/props.mk
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/bootanimation.mk
 include vendor/euclid/config/telephony.mk
