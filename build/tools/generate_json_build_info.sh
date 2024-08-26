@@ -33,15 +33,18 @@ if [ -f $existingOTAjson ]; then
         oem=`grep -n "\"oem\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
         device=`grep -n "\"device\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
         filename=$3
-        v_euclid=`grep 'EUCLIDVERSION =' $version | tr -d ' ' | cut -d '=' -f 2`
-        version=`echo $v_euclid`
+        v_major=`grep 'PRODUCT_VERSION_MAJOR =' $version | tr -d ' ' | cut -d '=' -f 2`
+        v_minor=`grep 'PRODUCT_VERSION_MINOR =' $version | tr -d ' ' | cut -d '=' -f 2`
+        version=`echo $v_major.$v_minor`
         buildprop=$2/system/build.prop
         linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
+        defaultprop=$2/recovery/root/prop.default
+        type=`grep -n "ro.euclid.releasevarient" $defaultprop | cut -d':' -f1`
         timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
         md5=`md5sum "$2/$3" | cut -d' ' -f1`
         sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
         size=`stat -c "%s" "$2/$3"`
-        buildtype=`grep -n "\"buildtype\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+        buildtype=`sed -n $type'p' < $defaultprop | cut -d'=' -f2`
         forum=`grep -n "\"forum\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
         if [ ! -z "$forum" ]; then
                 forum="https:"$forum
@@ -60,7 +63,7 @@ if [ -f $existingOTAjson ]; then
                         "device": "'$device'",
                         "version": "'$version'",
                         "filename": "'$filename'",
-                        "download": "https://sourceforge.net/projects/euclidOS/files/'$1'/'$3'/download",
+                        "download": "https://sourceforge.net/projects/euclidos-releases/files/Android-14/'$1'/'$buildtype'/'$3'/download",
                         "timestamp": '$timestamp',
                         "md5": "'$md5'",
                         "sha256": "'$sha256'",
@@ -73,11 +76,15 @@ if [ -f $existingOTAjson ]; then
 }' >> $output
 else
         filename=$3
-        v_euclid=`grep 'EUCLIDVERSION =' $version | tr -d ' ' | cut -d '=' -f 2`
-        version=`echo $v_euclid`
+        v_major=`grep 'PRODUCT_VERSION_MAJOR =' $version | tr -d ' ' | cut -d '=' -f 2`
+        v_minor=`grep 'PRODUCT_VERSION_MINOR =' $version | tr -d ' ' | cut -d '=' -f 2`
+        version=`echo $v_major.$v_minor`
         buildprop=$2/system/build.prop
         linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
         timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
+        defaultprop=$2/recovery/root/prop.default
+        type=`grep -n "ro.euclid.releasevarient" $defaultprop | cut -d':' -f1`
+        buildtype=`sed -n $type'p' < $defaultprop | cut -d'=' -f2`
         md5=`md5sum "$2/$3" | cut -d' ' -f1`
         sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
         size=`stat -c "%s" "$2/$3"`
@@ -90,12 +97,12 @@ else
                         "device": "''",
                         "version": "'$version'",
                         "filename": "'$filename'",
-                        "download": "https://sourceforge.net/projects/euclidOS/files/'$1'/'$3'/download",
+                        "download": "https://sourceforge.net/projects/euclidos-releases/files/Android-14/'$1'/'$buildtype'/'$3'/download",
                         "timestamp": '$timestamp',
                         "md5": "'$md5'",
                         "sha256": "'$sha256'",
                         "size": '$size',
-                        "buildtype": "''",
+                        "buildtype": "'$buildtype'",
                         "forum": "''",
                         "telegram": "''"
                 }
