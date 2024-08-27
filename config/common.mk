@@ -315,7 +315,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
     Settings \
-    SystemUI
+    SystemUI \
+    NexusLauncherRelease \
+    GameSpace
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
