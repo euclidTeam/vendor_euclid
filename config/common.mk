@@ -367,6 +367,8 @@ endif
 # Audio
 include vendor/euclid/config/audio.mk
 
+# Themes
+include packages/overlays/Themes/themes.mk
 
 include vendor/euclid/config/ota.mk
 include vendor/euclid/config/props.mk
