@@ -341,6 +341,7 @@ PRODUCT_PACKAGES += \
     Etar \
     Glimpse \
     OmniJaws \
+    OmniStyle \
     Recorder \
     ExactCalculator \
     euclidOSWallpaperStub \
