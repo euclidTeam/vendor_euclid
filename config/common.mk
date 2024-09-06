@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Aperture \
     Etar \
+    GameSpace \
     Glimpse \
     OmniJaws \
     OmniStyle \
