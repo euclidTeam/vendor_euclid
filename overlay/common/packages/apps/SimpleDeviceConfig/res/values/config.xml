@@ -54,5 +54,7 @@
         <!-- Enable protected by android banner -->
         <item>privacy/safety_protection_enabled=true</item>
 
+        <!-- Media Provider -->
+        <item>mediaprovider/allowed_cloud_providers=com.google.android.apps.photos.cloudpicker</item>
     </string-array>
 </resources>
