@@ -8,7 +8,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.name_for_attestation?=caiman \
     ro.product.device_for_attestation?=caiman \
     ro.product.manufacturer_for_attestation?=Google
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PIHOOKS_BUILD_FINGERPRINT="google/caiman/caiman:14/AD1A.240530.047.U1/12150698:user/release-keys" \
     PIHOOKS_MODEL_SPOOF="Pixel 9 Pro"
