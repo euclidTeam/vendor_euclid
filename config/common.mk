@@ -95,14 +95,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-ifeq ($(HERTZIFY_BUILD_TYPE), OFFICIAL)
-# euclid packages
+# Component overrides
 PRODUCT_PACKAGES += \
-    Updater
-
-PRODUCT_COPY_FILES += \
-    vendor/euclid/prebuilt/common/etc/init/init.euclid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.euclid-updater.rc
-endif
+    euclid-component-overrides.xml
 
 
 # Extra tools

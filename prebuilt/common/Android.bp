@@ -10,3 +10,11 @@ java_import {
     jars: ["lib/vendorAacHardwareRichtapVibrator.jar"],
     sdk_version: "current",
 }
+
+prebuilt_etc_xml {
+    name: "euclid-component-overrides.xml",
+    product_specific: true,
+    src: "etc/euclid-component-overrides.xml",
+    sub_dir: "sysconfig",
+}
+
