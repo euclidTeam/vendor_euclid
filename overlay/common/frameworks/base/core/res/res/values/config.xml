@@ -169,5 +169,5 @@
     <string name="config_clockFontFamily" translatable="false" />
     
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.6</item>
 </resources>
