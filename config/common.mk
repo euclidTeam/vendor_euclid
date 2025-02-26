@@ -253,10 +253,14 @@ CUSTOM_LOCALES += \
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/euclid/config/device_framework_matrix.xml
 
+# Game Props
+TARGET_PRODUCT_PROP += vendor/euclid/config/gameprops/product.prop
+
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/euclid.mk
 
 -include vendor/euclid-priv/keys/keys.mk
+
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
