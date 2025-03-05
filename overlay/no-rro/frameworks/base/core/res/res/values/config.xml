@@ -33,4 +33,8 @@
     <string name="config_defaultContextualSearchKey">omni.entry_point</string>
     <string name="config_defaultContextualSearchLegacyEnabled">omni.enable_vis</string>
     <string name="config_defaultContextualSearchPackageName" translatable="false">com.google.android.googlequicksearchbox</string>
+    
+    <string name="db_default_journal_mode" translatable="false">MEMORY</string>
+    <string name="db_default_sync_mode" translatable="false">OFF</string>
+    <string name="db_wal_sync_mode" translatable="false">OFF</string>
 </resources>
