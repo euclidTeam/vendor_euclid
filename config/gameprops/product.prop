@@ -163,3 +163,7 @@ persist.sys.gameprops.com.vng.codmvn.BRAND?=Lenovo
 persist.sys.gameprops.com.vng.codmvn.DEVICE?=TB-9707F
 persist.sys.gameprops.com.vng.codmvn.MANUFACTURER?=Lenovo
 persist.sys.gameprops.com.vng.codmvn.MODEL?=Lenovo TB-9707F
+persist.sys.gameprops.com.proxima.dfm.BRAND?=Oneplus
+persist.sys.gameprops.com.proxima.dfm.DEVICE?=Oneplus 13
+persist.sys.gameprops.com.proxima.dfm.MANUFACTURER?=PJZ110
+persist.sys.gameprops.com.proxima.dfm.MODEL?=PJZ110
