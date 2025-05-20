@@ -7,7 +7,9 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 # Bootanimation
 $(call inherit-product, vendor/euclid/config/bootanimation.mk)
 
+
 PRODUCT_BRAND ?= euclidOS
+
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -61,6 +63,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 endif
 endif
+
+PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
 
 # euclid-specific init rc file
 PRODUCT_COPY_FILES += \
