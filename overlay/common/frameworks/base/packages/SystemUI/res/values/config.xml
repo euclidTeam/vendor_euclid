@@ -42,4 +42,6 @@
     <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
 
     <bool name="config_vibrateOnIconAnimation" translatable="false">false</bool>
+    
+    <bool name="config_quickSettingsMediaLandscapeCollapsed" translatable="false">false</bool>
 </resources>
