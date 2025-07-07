@@ -172,4 +172,6 @@
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.6</item>
 
     <bool name="config_enableBurnInProtection">true</bool>
+    
+    <bool name="config_dreamsEnabledByDefault">false</bool>
 </resources>
