@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.systemui"
+  name: "always_compose_qs_ui_fragment"
+  state: DISABLED
+  permission: READ_ONLY
+}
