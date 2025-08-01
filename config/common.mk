@@ -261,6 +261,8 @@ include vendor/euclid/config/euclid.mk
 include vendor/euclid/PlayIntegrity/pif.mk
 -include vendor/euclid-priv/keys/keys.mk
 
+# boost framework
+include vendor/euclid/config/boost.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
