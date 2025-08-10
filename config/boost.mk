@@ -5,8 +5,6 @@ EUCLID_CPU_BG ?= 0-2
 EUCLID_CPU_FG ?= 0-5
 EUCLID_CPU_LIMIT_BG ?= 0-1
 EUCLID_CPU_LIMIT_UI ?= 0-4
-EUCLID_CPU_DISPLAY ?= 4-7
-EUCLID_CPU_AUDIO ?= 0-3
 # boost properties
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_big=$(EUCLID_CPU_BIG_CORES) \
@@ -16,5 +14,3 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_fg=$(EUCLID_CPU_FG) \
     persist.sys.euclid_cpu_limit_ui=$(EUCLID_CPU_LIMIT_UI) \
     persist.sys.euclid_cpu_unlimit_ui=$(EUCLID_CPU_UNLIMIT_UI) \
-    persist.sys.euclid_cpu_audio=$(EUCLID_CPU_AUDIO) \
-    persist.sys.euclid_cpu_display=$(EUCLID_CPU_DISPLAY) \
