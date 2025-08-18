@@ -17,3 +17,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_limit_ui=$(EUCLID_CPU_LIMIT_UI) \
     persist.sys.euclid_cpu_unlimit_ui=$(EUCLID_ALL_CORES) \
     persist.sys.euclid_cpu_display=$(EUCLID_CPU_DISPLAY)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.uclamp.min=165
