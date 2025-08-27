@@ -8,6 +8,9 @@ EUCLID_CPU_LIMIT_BG ?= 0-1
 EUCLID_CPU_LIMIT_UI ?= 0-2
 EUCLID_CPU_DISPLAY ?= 0-5
 
+# feature
+PERF_ANIM_OVERRIDE ?= false
+
 # boost properties
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_big=$(EUCLID_CPU_BIG_CORES) \
@@ -22,3 +25,4 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.uclamp.min=100
+    persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
