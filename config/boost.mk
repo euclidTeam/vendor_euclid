@@ -19,4 +19,4 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_display=$(EUCLID_CPU_DISPLAY)
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.uclamp.min=165
+    ro.surface_flinger.uclamp.min=100
