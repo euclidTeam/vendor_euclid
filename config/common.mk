@@ -163,11 +163,20 @@ endif
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    CarSystemUI \
+    Launcher3QuickStep \
+    NexusLauncherRelease \
+    Settings \
     SystemUI
+
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
+
+#GMS
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/pixel-style/config/common.mk)
+endif
 
 include vendor/euclid/config/version.mk
 
