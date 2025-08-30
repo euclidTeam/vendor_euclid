@@ -181,7 +181,16 @@ endif
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    NexusLauncherRelease \
+    Settings \
     SystemUI
+
+#GMS
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/pixel-style/config/common.mk)
+endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
