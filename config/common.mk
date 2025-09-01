@@ -176,6 +176,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
+# Inherit SystemUI Clocks if they exist
+$(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
+
 #GMS
 ifeq ($(WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/gms_full.mk)
