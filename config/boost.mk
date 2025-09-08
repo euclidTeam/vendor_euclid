@@ -24,5 +24,5 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.euclid_cpu_display=$(EUCLID_CPU_DISPLAY)
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.uclamp.min=100
+    ro.surface_flinger.uclamp.min=10
     persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
