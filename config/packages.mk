@@ -29,3 +29,8 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mke2fs \
     mkfs.exfat
+
+TORCH_STR_SUPPORTED ?= false
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.torch_str_support=$(TORCH_STR_SUPPORTED)
