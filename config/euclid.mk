@@ -9,3 +9,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 endif
 
 PRODUCT_SYSTEM_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+
+# Enable Material Design 3 Expressive
+PRODUCT_PRODUCT_PROPERTIES += \
+    is_expressive_design_enabled=true
