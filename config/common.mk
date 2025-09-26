@@ -186,6 +186,7 @@ $(call inherit-product, vendor/pixel-style/config/common.mk)
 endif
 
 include vendor/euclid/config/version.mk
+include vendor/euclid/config/euclid.mk
 
 -include vendor/euclid-priv/keys/keys.mk
 
