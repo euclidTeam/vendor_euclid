@@ -15,6 +15,8 @@
 ANDROID_VERSION := 16
 EUCLIDVERSION := 1.0
 
+EUCLID_CODENAME := Alpha
+
 EUCLID_BUILD_TYPE ?= UNOFFICIAL
 EUCLID_MAINTAINER ?= UNKNOWN
 EUCLID_DATE_YEAR := $(shell date -u +%Y)
@@ -57,4 +59,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.euclid.fingerprint=$(EUCLID_FINGERPRINT) \
   ro.euclid.device=$(EUCLID_BUILD) \
   org.euclid.version=$(EUCLIDVERSION) \
+  ro.euclid.codename=$(EUCLID_CODENAME) \
   ro.euclid.maintainer=$(EUCLID_MAINTAINER)
