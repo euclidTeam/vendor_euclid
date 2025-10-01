@@ -190,10 +190,17 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
-#GMS
-ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gms/gms_full.mk)
+# GMS
+WITH_GMS ?= false
+ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/pixel-style/config/common.mk)
+ifeq ($(TARGET_USES_MINI_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_mini.mk)
+else ifeq ($(TARGET_USES_PICO_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_pico.mk)
+else
+$(call inherit-product, vendor/gms/gms_full.mk)
+endif
 endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
