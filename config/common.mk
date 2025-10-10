@@ -259,3 +259,6 @@ include vendor/euclid/config/euclid.mk
 -include vendor/euclid-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# Include extra packages
+include vendor/euclid/config/packages.mk
