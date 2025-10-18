@@ -258,7 +258,7 @@ TARGET_PRODUCT_PROP += vendor/euclid/config/gameprops/product.prop
 
 include vendor/euclid/config/version.mk
 include vendor/euclid/config/euclid.mk
-
+include vendor/euclid/PlayIntegrity/pif.mk
 -include vendor/euclid-priv/keys/keys.mk
 
 
