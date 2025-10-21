@@ -61,3 +61,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   org.euclid.version=$(EUCLIDVERSION) \
   ro.euclid.codename=$(EUCLID_CODENAME) \
   ro.euclid.maintainer=$(EUCLID_MAINTAINER)
+
+# euclidOS custom build version
+BUILD_DISPLAY_ID := euclidOS-$(shell date +%Y%m%d-%H%M)-$(BUILD_TYPE)-$(EUCLID_BUILD_TYPE)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.build.display.id=$(BUILD_DISPLAY_ID)
