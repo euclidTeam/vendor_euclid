@@ -4,7 +4,9 @@ PRODUCT_PACKAGES += \
     euclidOSSetupWizard \
     ExactCalculator \
     Glimpse \
-    Datura 
+    Datura \
+    ThemePicker \
+    ThemesStub
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
