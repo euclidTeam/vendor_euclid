@@ -3,8 +3,7 @@ PRODUCT_PACKAGES += \
     Etar \
     euclidOSSetupWizard \
     ExactCalculator \
-    Glimpse \
-    EdgeLauncher
+    Glimpse 
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
