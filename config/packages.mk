@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
     Glimpse \
     Datura \
     ThemePicker \
-    ThemesStub
+    ThemesStub \
+    OmniJaws
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
