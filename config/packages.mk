@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     Etar \
     euclidOSSetupWizard \
     ExactCalculator \
-    Glimpse 
+    Glimpse \
+    Datura 
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
