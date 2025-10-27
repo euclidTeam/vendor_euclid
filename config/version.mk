@@ -18,7 +18,6 @@ EUCLIDVERSION := 3.0
 EUCLID_CODENAME := Alpha
 
 EUCLID_BUILD_TYPE ?= UNOFFICIAL
-EUCLID_MAINTAINER ?= UNKNOWN
 EUCLID_DATE_YEAR := $(shell date -u +%Y)
 EUCLID_DATE_MONTH := $(shell date -u +%m)
 EUCLID_DATE_DAY := $(shell date -u +%d)
@@ -61,7 +60,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.euclid.device=$(EUCLID_BUILD) \
   org.euclid.version=$(EUCLIDVERSION) \
   ro.euclid.codename=$(EUCLID_CODENAME) \
-  ro.euclid.maintainer=$(EUCLID_MAINTAINER)
+  ro.maintainer.name=$(EUCLID_MAINTAINER)
 
 # euclidOS custom build version
 BUILD_DISPLAY_ID := euclidOS-$(shell date +%Y%m%d-%H%M)-$(BUILD_TYPE)-$(EUCLID_BUILD_TYPE)
