@@ -264,3 +264,6 @@ include vendor/euclid/config/boost.mk
 
 # Include extra packages
 include vendor/euclid/config/packages.mk
+
+# Include Prebuilds
+include vendor/prebuilds/prebuilds.mk
