@@ -51,6 +51,7 @@ EUCLID_FINGERPRINT := EUCLIDOS/$(EUCLID_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(E
 
 # EUCLID System Version
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+  ro.euclid.android.version=$(ANDROID_VERSION) \
   ro.euclid.version=$(EUCLID_DISPLAY_VERSION) \
   ro.euclid.build.status=$(EUCLID_BUILD_TYPE) \
   ro.modversion=$(EUCLID_MOD_VERSION) \
