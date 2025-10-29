@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     Datura \
     ThemePicker \
     ThemesStub \
-    OmniJaws
+    OmniJaws \
+    AppLocker
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
